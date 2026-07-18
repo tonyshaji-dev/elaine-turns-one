@@ -1,0 +1,5 @@
+# Elaine Turns One - robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: {{SITE_URL}}/sitemap.xml
