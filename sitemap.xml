@@ -1,0 +1,28 @@
+Generate ONLY the complete sitemap.xml file for my existing project.
+
+DO NOT regenerate any other file.
+
+The following files are already completed:
+
+- README.md
+- index.html
+- style.css
+- script.js
+- manifest.json
+- robots.txt
+
+Requirements:
+
+- Generate a valid XML sitemap.
+- Use {{SITE_URL}} as the base URL.
+- Include only the homepage (/).
+- Set:
+  - lastmod: {{LASTMOD_DATE}}
+  - changefreq: monthly
+  - priority: 1.0
+- Use UTF-8 encoding.
+- Follow the official sitemap protocol.
+
+The output must contain ONLY the complete sitemap.xml file.
+
+Do not include explanations, markdown, or any extra text.
