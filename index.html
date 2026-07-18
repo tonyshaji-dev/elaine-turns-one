@@ -1,1 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="description" content="Join Tony & Jeffy to celebrate our beloved daughter Elaine's First Birthday. Saturday, 25 July 2026 in Cham.">
+    <title>Elaine Turns One | A Premium Celebration</title>
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://elaineturnsone.com">
+
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="Elaine Turns One | First Birthday Celebration">
+    <meta property="og:description" content="With immense joy and gratitude, Tony & Jeffy invite you to celebrate our beloved daughter Elaine's First Birthday.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    <meta property="og:url" content="https://elaineturnsone.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elaine Turns One | First Birthday Celebration">
+    <meta name="twitter:description" content="Join Tony & Jeffy in celebrating Elaine's 1st birthday in Cham.">
+    <meta name="twitter:image" content="assets/images/og-image.jpg">
+
+    <!-- PWA & Icons -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD Event Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Elaine's First Birthday",
+      "startDate": "2026-07-25T13:00:00+02:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Evangelical Church Hall",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Ludwigstraße 21",
+          "addressLocality": "Cham",
+          "addressCountry": "DE"
+        }
+      },
+      "organizer": {
+        "@type": "Person",
+        "name": "Tony & Jeffy"
+      },
+      "description": "With immense joy and gratitude, Tony & Jeffy invite you to celebrate our beloved daughter Elaine's First Birthday."
+    }
+    </script>
+</head>
+<body class="loading">
+
+    <!-- Luxury Loading Screen -->
+    <div id="loader" class="loader-overlay" aria-hidden="true">
+        <div class="loader-content">
+            <div class="loader-text-wrapper">
+                <span class="loader-title">Elaine</span>
+            </div>
+            <div class="loader-progress-container">
+                <div class="loader-progress-line" id="loader-progress"></div>
+            </div>
+            <div class="loader-text-wrapper">
+                <span class="loader-subtitle">Turns One</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Background Elements -->
+    <canvas id="particles-canvas" class="particles-canvas" aria-hidden="true"></canvas>
+    
+    <!-- Ambient Audio -->
+    <audio id="bg-music" loop preload="none">
+        <source src="assets/audio/ambient-luxury.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Music Toggle -->
+    <button id="music-toggle" class="music-btn glass-btn" aria-label="Toggle background music">
+        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg class="icon-pause hidden" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+    </button>
+
+    <!-- Premium Navigation -->
+    <nav id="navbar" class="navbar glass-nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Back to top">E</a>
+            <ul class="nav-links desktop-nav">
+                <li><a href="#details" class="nav-link">Details</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+            </ul>
+            <button id="mobile-menu-btn" class="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu glass-panel" aria-hidden="true">
+            <ul class="nav-links mobile-nav">
+                <li><a href="#details" class="nav-link">Details</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Cinematic Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-background">
+                <div class="hero-image-wrapper">
+                    <img src="assets/images/hero-portrait.jpg" alt="Elaine Portrait" class="hero-image" fetchpriority="high">
+                </div>
+                <div class="hero-overlay glass-overlay"></div>
+                <div class="hero-light-rays" aria-hidden="true"></div>
+            </div>
+            
+            <div class="hero-content reveal-element">
+                <p class="hero-pre-title">A Little Miracle</p>
+                <h1 class="hero-title gold-foil-text">ELAINE</h1>
+                <h2 class="hero-subtitle">Turns One</h2>
+                
+                <div class="hero-separator"></div>
+                
+                <p class="hero-description">
+                    With immense joy and gratitude,<br>
+                    Tony & Jeffy invite you to celebrate<br>
+                    our beloved daughter Elaine's First Birthday.
+                </p>
+            </div>
+
+            <a href="#countdown" class="scroll-indicator" aria-label="Scroll down">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text">Discover</span>
+            </a>
+        </section>
+
+        <!-- Flip-Card Countdown Section -->
+        <section id="countdown" class="countdown-section section-padding">
+            <div class="container text-center reveal-element">
+                <div class="flip-countdown" id="countdown-timer">
+                    <div class="countdown-block">
+                        <div class="flip-card">
+                            <div class="flip-card-top" id="days-top">00</div>
+                            <div class="flip-card-bottom" id="days-bottom">00</div>
+                        </div>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-block">
+                        <div class="flip-card">
+                            <div class="flip-card-top" id="hours-top">00</div>
+                            <div class="flip-card-bottom" id="hours-bottom">00</div>
+                        </div>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-block">
+                        <div class="flip-card">
+                            <div class="flip-card-top" id="minutes-top">00</div>
+                            <div class="flip-card-bottom" id="minutes-bottom">00</div>
+                        </div>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-block">
+                        <div class="flip-card">
+                            <div class="flip-card-top" id="seconds-top">00</div>
+                            <div class="flip-card-bottom" id="seconds-bottom">00</div>
+                        </div>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                <div id="celebration-message" class="celebration-message hidden">
+                    <h3 class="gold-foil-text">The Celebration Begins!</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details Section -->
+        <section id="details" class="details-section section-padding">
+            <div class="ambient-glow right-glow"></div>
+            <div class="container">
+                <header class="section-header reveal-element">
+                    <span class="section-kicker">When & Where</span>
+                    <h2 class="section-title">The Details</h2>
+                </header>
+
+                <div class="details-grid">
+                    <!-- Date & Time Info -->
+                    <article class="details-card text-content reveal-element">
+                        <div class="card-border-accent"></div>
+                        <h3 class="detail-day">Saturday</h3>
+                        <div class="detail-date gold-foil-text">25 July 2026</div>
+                        <p class="detail-time">1:00 PM Onwards</p>
+                    </article>
+
+                    <!-- Venue Info -->
+                    <article class="details-card glass-card reveal-element staggered-delay-1">
+                        <h3 class="venue-name">Evangelical Church Hall</h3>
+                        <p class="venue-address">Ludwigstraße 21</p>
+                        <p class="venue-city">Cham, Germany</p>
+                        
+                        <div class="map-buttons">
+                            <a href="https://maps.apple.com/?address=Ludwigstra%C3%9Fe%2021,%2093413%20Cham,%20Germany&ll=49.2198,12.6653&q=Evangelical%20Church%20Hall" target="_blank" rel="noopener noreferrer" class="btn btn-apple-maps">
+                                <svg class="btn-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                                <span>Apple Maps</span>
+                            </a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Evangelical+Church+Hall+Ludwigstraße+21+Cham" target="_blank" rel="noopener noreferrer" class="btn btn-google-maps">
+                                <svg class="btn-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267.9 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg>
+                                <span>Google Maps</span>
+                            </a>
+                        </div>
+                        
+                        <div class="venue-footer">
+                            <svg class="venue-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Free parking available at the venue.</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Elegant Timeline Section -->
+        <section id="timeline" class="timeline-section section-padding">
+            <div class="ambient-glow left-glow"></div>
+            <div class="container">
+                <header class="section-header reveal-element">
+                    <span class="section-kicker">Program</span>
+                    <h2 class="section-title">Order of Events</h2>
+                </header>
+
+                <div class="timeline-container">
+                    <div class="timeline-track"></div>
+                    
+                    <article class="timeline-item reveal-element">
+                        <div class="timeline-time gold-foil-text">1:00 PM</div>
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 class="timeline-title">Welcome</h3>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal-element">
+                        <div class="timeline-time gold-foil-text">1:30 PM</div>
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 class="timeline-title">Lunch</h3>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal-element">
+                        <div class="timeline-time gold-foil-text">3:00 PM</div>
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 class="timeline-title">Cake Cutting</h3>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal-element">
+                        <div class="timeline-time gold-foil-text">3:30 PM</div>
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 class="timeline-title">Photography</h3>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal-element">
+                        <div class="timeline-time gold-foil-text">4:00 PM</div>
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 class="timeline-title">Desserts</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Gallery Section -->
+        <section id="gallery" class="gallery-section section-padding">
+            <div class="container">
+                <header class="section-header reveal-element">
+                    <span class="section-kicker">Memories</span>
+                    <h2 class="section-title">Gallery</h2>
+                </header>
+                
+                <div class="gallery-grid" id="masonry-grid">
+                    <div class="gallery-item reveal-element">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3C/svg%3E" data-src="assets/images/gallery-1.jpg" alt="Elaine Photo 1" class="gallery-image lazy-load">
+                        <div class="gallery-overlay" aria-label="View image fullscreen" role="button" tabindex="0">
+                            <svg class="zoom-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal-element staggered-delay-1">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 4'%3E%3C/svg%3E" data-src="assets/images/gallery-2.jpg" alt="Elaine Photo 2" class="gallery-image lazy-load">
+                        <div class="gallery-overlay" aria-label="View image fullscreen" role="button" tabindex="0">
+                            <svg class="zoom-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal-element staggered-delay-2">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3C/svg%3E" data-src="assets/images/gallery-3.jpg" alt="Elaine Photo 3" class="gallery-image lazy-load">
+                        <div class="gallery-overlay" aria-label="View image fullscreen" role="button" tabindex="0">
+                            <svg class="zoom-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal-element">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 4'%3E%3C/svg%3E" data-src="assets/images/gallery-4.jpg" alt="Elaine Photo 4" class="gallery-image lazy-load">
+                        <div class="gallery-overlay" aria-label="View image fullscreen" role="button" tabindex="0">
+                            <svg class="zoom-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal-element staggered-delay-1">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3C/svg%3E" data-src="assets/images/gallery-5.jpg" alt="Elaine Photo 5" class="gallery-image lazy-load">
+                        <div class="gallery-overlay" aria-label="View image fullscreen" role="button" tabindex="0">
+                            <svg class="zoom-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal-element staggered-delay-2">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3C/svg%3E" data-src="assets/images/gallery-6.jpg" alt="Elaine Photo 6" class="gallery-image lazy-load">
+                        <div class="gallery-overlay" aria-label="View image fullscreen" role="button" tabindex="0">
+                            <svg class="zoom-icon" fill="none" 
